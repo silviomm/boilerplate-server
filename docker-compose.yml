@@ -1,0 +1,36 @@
+version: '3'
+services:
+    nginx:
+        build:
+            dockerfile: ./docker/nginx.dockerfile
+            context: .
+        image: silviomm/nginx
+        container_name: nginx
+        ports:
+            - "80:80"
+        networks: 
+            - production-network
+        depends_on: 
+            - "node1"
+
+    mongodb:
+        image: mongo
+        networks: 
+            - production-network
+
+    node1:
+        build:
+            dockerfile: ./docker/server.dockerfile
+            context: .
+        image: silviomm/server-ts
+        container_name: server
+        ports:
+            - "3000"
+        networks: 
+            - production-network
+        depends_on:
+            - "mongodb"
+
+networks: 
+    production-network:
+        driver: bridge
