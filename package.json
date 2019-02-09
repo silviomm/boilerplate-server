@@ -1,5 +1,5 @@
 {
-  "name": "base-ts-node-mongo-server",
+  "name": "boilerplate-server",
   "version": "1.0.0",
   "description": "Boilerplate for [RESTful, Typescript, Nodejs, MongoDB] server",
   "main": "dist/server.js",
