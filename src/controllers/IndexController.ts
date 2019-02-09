@@ -6,7 +6,7 @@ export class IndexController {
 
         app.route('/')
             .get((req, res) => {
-                res.json('Ok!')
+                res.json('oie')
             });
     }
 }

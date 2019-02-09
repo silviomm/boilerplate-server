@@ -9,3 +9,5 @@ Boilerplate for [RESTful, Typescript, Nodejs, MongoDB] server
 ```
 docker-compose up --build
 ```
+
+Then enter `localhost:80`
